@@ -3,83 +3,60 @@
 
 h1,
 .h1 {
-  font-size: 48px;
-  line-height: 1.3;
+  font-size: 28px;
+  line-height: percentage(40 / 28);
 
-  @include vp-767 {
-    font-size: 32px;
-  }
-
-  @include vp-374 {
-    font-size: 28px;
-  }
+  letter-spacing: -0.6px;
 }
 
 h2,
 .h2 {
-  font-size: 28px;
-  line-height: 1.3;
+  font-size: 24px;
+  line-height: percentage(32 / 24);
 
-  @include vp-767 {
-    font-size: 24px;
-  }
+  letter-spacing: -0.6px;
 }
 
 h3,
 .h3 {
-  font-size: 24px;
-  line-height: 1.3;
+  font-size: 16px;
+  line-height: percentage(24 / 16);
 
-  @include vp-767 {
-    font-size: 20px;
-  }
+  text-transform: uppercase;
+  letter-spacing: -0.2px;
+  color: $color-site-text-secondary;
 }
 
 h4,
-.h4 {
-  font-size: 18px;
-  line-height: 1.3;
-
-  @include vp-767 {
-    font-size: 16px;
-  }
-}
-
 h5,
-.h5 {
-  font-size: 16px;
-  line-height: 1.3;
-
-  @include vp-767 {
-    font-size: 14px;
-  }
-}
-
-h6,
-.h6 {
-  font-size: 14px;
-  line-height: 1.3;
+h6 {
+  @extend .h3;
 }
 
 // Text
 // ---------------------------------
 
+%txt-sm {
+  font-size: 14px;
+  line-height: percentage(16 / 14);
+}
+
 %txt {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: percentage(20 / 14);
 }
 
 %txt-lg {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: percentage(24 / 16);
 }
 
 %txt-xl {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: percentage(28 / 20);
 }
 
 %txt-2xl {
   font-size: 24px;
-  line-height: 1.6;
+  line-height: percentage(32 / 24);
 }

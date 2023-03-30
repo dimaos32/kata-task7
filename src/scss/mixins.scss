@@ -38,105 +38,38 @@
   list-style: none;
 }
 
-@mixin base-ulist {
-  margin: 0;
-  padding: 0;
-  padding-left: 20px;
-
-  list-style: none;
-
-  li {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 9px;
-      left: -20px;
-
-      width: 8px;
-      height: 8px;
-
-      border: 2px solid $color-site-primary;
-      border-radius: 50%;
-    }
-  }
-}
-
-
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1239 {
-  @media (max-width: ($vp-1240 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-575 {
-  @media (max-width: ($vp-576 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
-}
 
 // Mobile first
 
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
+@mixin vp-375 {
+  @media (min-width: $vp-375) {
+    @content;
+  }
+}
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
+@mixin vp-576 {
+  @media (min-width: $vp-576) {
+    @content;
+  }
+}
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
+    @content;
+  }
+}
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
 
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
+@mixin vp-1440 {
+  @media (min-width: $vp-1440) {
+    @content;
+  }
+}
 
 // ---------------------------------
 

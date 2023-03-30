@@ -1,29 +1,15 @@
 :root {
-  --container-max-width: 1240px;
-  --container-padding-x: 40px;
+  --container-max-width: 720px;
+  --container-padding-x: 16px;
 
-  --header-height: 127px;
-
-  @include vp-1023 {
-    --container-max-width: 1008px;
-    --container-padding-x: 32px;
-  }
-
-  @include vp-767 {
-    --container-max-width: 752px;
+  @include vp-768 {
+    --container-max-width: 960px;
     --container-padding-x: 24px;
   }
 
-  @include vp-575 {
-    --container-max-width: 560px;
-    --container-padding-x: 16px;
-  }
-
-  @include vp-374 {
-    --container-max-width: 363px;
-    --container-padding-x: 10px;
-
-    --header-height: 94px;
+  @include vp-1024 {
+    --container-max-width: 1120px;
+    --container-padding-x: 32px;
   }
 }
 
@@ -46,7 +32,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-family: $ff-primary;
-  color: $color-default-black;
+  color: $color-site-text-primary;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

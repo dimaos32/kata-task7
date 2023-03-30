@@ -1,19 +1,19 @@
 // Colors
 // ---------------------------------
 
-// Default
-
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
-// Project palette
-// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+$color-black-russian:               #1b1c21;
+$color-storm-grey:                  #7e7e82;
 
+$color-violet-red:                  #ff3e79;
 
+$color-site-primary:                $color-violet-red;
 
-// $color-site-primary:                $color-summer-sky;
-// $color-site-secondary:              $color-allports;
+$color-site-text-primary:           $color-black-russian;
+$color-site-text-secondary:         $color-storm-grey;
 
 // Gradient
 
@@ -51,5 +51,4 @@ $vp-375:                            375px;
 $vp-576:                            576px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
-$vp-1240:                           1240px;
-$vp-1920:                           1920px;
+$vp-1440:                           1440px;
