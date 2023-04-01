@@ -7,13 +7,25 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-black-russian:               #1b1c21;
 $color-storm-grey:                  #7e7e82;
+$color-spun-pearl:                  #a0a0a3;
+$color-whisper:                     #eaeaea;
+$color-white-smoke:                 #f8f8f8;
 
 $color-violet-red:                  #ff3e79;
 
+$color-turquoise:                   #41f6d7;
+$color-clear-day:                   #d9fff5;
+
+
 $color-site-primary:                $color-violet-red;
+$color-site-secondary:              $color-turquoise;
 
 $color-site-text-primary:           $color-black-russian;
 $color-site-text-secondary:         $color-storm-grey;
+
+$color-site-bg-primary:             $color-white-smoke;
+
+$color-site-btn-disabled:           $color-spun-pearl;
 
 // Gradient
 
