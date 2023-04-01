@@ -30,6 +30,10 @@
     color: $color-default-white;
 
     color: $color-site-secondary;
+
+    .btn-icon__label {
+      color: $color-site-secondary;
+    }
   }
 
   &__img {
@@ -42,6 +46,8 @@
   display: none;
 
   color: $color-site-text-primary;
+
+  transition: color $trans-default;
 
   @include vp-1024 {
     display: block;

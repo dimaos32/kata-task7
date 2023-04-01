@@ -57,7 +57,7 @@ a {
   transition: color $trans-default;
 
   @include hover-focus {
-    color: red;
+    color: $color-site-primary;
   }
 }
 
