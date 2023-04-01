@@ -1,0 +1,51 @@
+.section {
+  padding-bottom: 32px;
+
+  border-bottom: 1px solid $color-clear-day;
+
+  &--first {
+    padding-top: 24px;
+  }
+
+  @include vp-1024 {
+    &--first {
+      padding-top: 40px;
+    }
+  }
+}
+
+.section__title {
+  margin: 0 calc(-1 * var(--container-padding-x)) 24px;
+  padding: 16px var(--container-padding-x);
+
+  background-image: $gradient-section-title;
+
+  .section--first & {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 32px;
+    padding: 0;
+
+    background-image: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(-1 * var(--container-padding-x));
+      bottom: 0;
+
+      width: 4px;
+      border-radius: 0 4px 4px 0;
+
+      background-color: $color-site-secondary;
+    }
+  }
+
+  @include vp-1024 {
+    .section--first & {
+      padding-right: 420px;
+    }
+  }
+}

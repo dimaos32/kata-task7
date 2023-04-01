@@ -1,9 +1,7 @@
 :root {
-  --container-max-width: 720px;
   --container-padding-x: 16px;
 
   @include vp-768 {
-    --container-max-width: 960px;
     --container-padding-x: 24px;
   }
 

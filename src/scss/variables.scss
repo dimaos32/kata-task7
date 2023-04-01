@@ -29,11 +29,11 @@ $color-site-btn-disabled:           $color-spun-pearl;
 
 // Gradient
 
-// $gradient-block:                    linear-gradient(
-//                                       180deg,
-//                                       $color-pattens-blue 0%,
-//                                       $color-transparent 100%
-//                                     );
+$gradient-section-title:            linear-gradient(
+                                      90deg,
+                                      $color-site-bg-primary 0%,
+                                      $color-default-white 98.5%
+                                    );
 
 // Shadow
 
