@@ -1,0 +1,45 @@
+.btn-tab {
+  @extend %txt-lg;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 18px;
+
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: $color-site-text-secondary;
+
+  background-color: $color-transparent;
+  border: 2px solid $color-transparent;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    background-color $trans-default,
+    border-color $trans-default;
+
+  &.is-active {
+    color: $color-site-text-secondary;
+
+    background-color: $color-default-white;
+    border-color: $color-water-leaf;
+
+    pointer-events: none;
+  }
+
+  &:disabled {
+    background-color: grey;
+    border-color: grey;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    color: $color-site-text-secondary;
+
+    background-color: $color-default-white;
+    border-color: $color-water-leaf;
+  }
+}

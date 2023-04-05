@@ -1,0 +1,52 @@
+[data-show-text] {
+  overflow: hidden;
+
+  transition: height 0.3s ease-in;
+}
+
+[data-show-toggle] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: $color-site-text-primary;
+
+  background-color: $color-transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition: color $trans-default;
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    color: $color-site-secondary;
+
+    transition:
+      color $trans-default,
+      transform $trans-default;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  [data-show-block="shown"] & {
+    svg {
+      transform: scaleY(-1);
+    }
+  }
+
+  @include hover-focus {
+    color: $color-site-primary;
+
+    svg {
+      color: $color-site-primary;
+    }
+  }
+}

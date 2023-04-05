@@ -1,0 +1,23 @@
+.slider-tabs {
+  position: relative;
+}
+
+.slider-tabs__list {
+  @include clear-list;
+
+  padding: 0 var(--container-padding-x);
+
+  @include vp-1024 {
+    flex-wrap: wrap;
+    margin: -2px -4px;
+    padding: 0;
+  }
+}
+
+.slider-tabs__item {
+  width: max-content;
+
+  @include vp-1024 {
+    padding: 2px 4px;
+  }
+}
