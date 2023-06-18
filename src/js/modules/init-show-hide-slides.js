@@ -11,7 +11,7 @@ const initShowHideSlides = () => {
 
     if (slides && toggle) {
       const toggleText = toggle.querySelector('span');
-      const slidesInner = slides.querySelector('.slider-partners__container');
+      const slidesInner = slides.querySelector('[data-show-slides-container');
 
       const showMoreText = toggle.dataset.showMore;
       const showLessText = toggle.dataset.showLess;

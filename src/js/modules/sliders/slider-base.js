@@ -4,16 +4,16 @@ const GAP = 16; // px
 
 const breakpoint = window.matchMedia('(max-width: 767px)');
 
-const initSliderPartners = () => {
-  const sliders = document.querySelectorAll('.slider-partners');
+const initSliderBase = () => {
+  const sliders = document.querySelectorAll('.slider-base');
 
   if (!sliders.length) {
     return;
   }
 
   sliders.forEach((slider) => {
-    const container = slider.querySelector('.slider-partners__container');
-    const slides = container.querySelectorAll('.slider-partners__slide');
+    const container = slider.querySelector('.slider-base__container');
+    const slides = container.querySelectorAll('.slider-base__slide');
 
     const checkIfNeedNavigation = () => {
       if (breakpoint.matches) {
@@ -40,8 +40,8 @@ const initSliderPartners = () => {
         },
         threshold: 10,
         pagination: {
-          el: '.slider-partners__pagination',
-          bulletClass: 'slider-partners__bullet',
+          el: '.slider-base__pagination',
+          bulletClass: 'slider-base__bullet',
           bulletActiveClass: 'is-active',
           clickable: true,
         },
@@ -80,4 +80,4 @@ const initSliderPartners = () => {
   });
 };
 
-export {initSliderPartners};
+export {initSliderBase};

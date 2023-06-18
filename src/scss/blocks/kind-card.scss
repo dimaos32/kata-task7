@@ -1,0 +1,64 @@
+.kind-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 160px;
+  padding: 15px;
+
+  background: $color-default-white;
+  border: 1px solid $color-whisper;
+  border-radius: 6px;
+
+  transition: border-color $trans-default;
+
+  @include hover-focus {
+    border-color: $color-site-primary;
+
+    .kind-card__pseudo-btn {
+      color: $color-default-white;
+
+      background-color: $color-site-primary;
+    }
+  }
+}
+
+.kind-card__title {
+  @extend %txt-lg;
+
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  margin: 0;
+  margin-bottom: 12px;
+
+  text-transform: none;
+}
+
+.kind-card__pseudo-btn {
+  flex-shrink: 0;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  color: $color-site-primary;
+
+  background-color: $color-default-white;
+  border: 2px solid $color-site-primary;
+  border-radius: 50%;
+
+  transition:
+    color $trans-default,
+    background-color $trans-default;
+}
+
+.kind-card__pseudo-btn-icon {
+  width: 16px;
+  height: 16px;
+}
