@@ -1,5 +1,5 @@
-const initShowHideText = () => {
-  const blocks = document.querySelectorAll('[data-show-text-block]');
+const initShowHideSlides = () => {
+  const blocks = document.querySelectorAll('[data-show-slides-block]');
 
   if (!blocks.length) {
     return;
@@ -7,38 +7,42 @@ const initShowHideText = () => {
 
   blocks.forEach((block) => {
     const toggle = block.querySelector('[data-show-toggle]');
-    const text = block.querySelector('[data-show-text]');
+    const slides = block.querySelector('[data-show-slides]');
 
-    if (text && toggle) {
-      const textInner = text.querySelector('.services__text-inner');
+    if (slides && toggle) {
       const toggleText = toggle.querySelector('span');
+      const slidesInner = slides.querySelector('.slider-partners__container');
 
       const showMoreText = toggle.dataset.showMore;
       const showLessText = toggle.dataset.showLess;
+
+      const height = Number(slides.dataset.showSlides);
+
+      slides.style.height = `${height}px`;
 
       const onToggleClick = () => {
         if (toggle.dataset.showToggle === 'hidden') {
           toggleText.textContent = showLessText;
           block.dataset.showBlock = 'shown';
           toggle.dataset.showToggle = 'shown';
-          text.style.height = `${textInner.offsetHeight}px`;
+          slides.style.height = `${slidesInner.offsetHeight}px`;
         } else {
           toggleText.textContent = showMoreText;
           block.dataset.showBlock = 'hidden';
           toggle.dataset.showToggle = 'hidden';
-          text.style.height = null;
+          slides.style.height = `${height}px`;
         }
       };
 
       const onWindowResize = () => {
         toggle.style.display = null;
 
-        if (textInner.offsetHeight <= text.offsetHeight) {
+        if (slidesInner.offsetHeight <= height) {
           toggle.style.display = 'none';
         }
       }
 
-      if (textInner.offsetHeight <= text.offsetHeight) {
+      if (slidesInner.offsetHeight <= height) {
         toggle.style.display = 'none';
       }
 
@@ -49,4 +53,4 @@ const initShowHideText = () => {
   });
 };
 
-export {initShowHideText};
+export {initShowHideSlides};

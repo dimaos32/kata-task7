@@ -54,5 +54,8 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "volta": {
+    "node": "14.21.3"
   }
 }

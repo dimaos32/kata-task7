@@ -11,9 +11,11 @@ import {focusLock} from './utils/focus-lock';
 import {scrollLock} from './utils/scroll-lock';
 
 import {initSliderTabs} from './modules/sliders/slider-tabs';
+import {initSliderPartners} from './modules/sliders/slider-partners';
 
 import {initTabs} from './modules/init-tabs';
 import {initShowHideText} from './modules/init-show-hide-text';
+import {initShowHideSlides} from './modules/init-show-hide-slides';
 
 import {initModals} from './modules/modals/init-modals';
 
@@ -27,9 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   initSliderTabs();
+  initSliderPartners();
 
   initTabs();
   initShowHideText();
+  initShowHideSlides();
 
   // Modules
   // ---------------------------------
