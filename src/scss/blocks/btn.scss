@@ -2,30 +2,34 @@
   @extend %txt-lg;
 
   display: inline-flex;
+  gap: 12px;
   justify-content: center;
   align-items: center;
-  min-width: 210px;
-  padding: 12px 40px;
+  min-width: 120px;
+  padding: 9px 12px 7px;
 
+  font-weight: 700;
+  font-size: 12px;
+  line-height: percentage(16 / 12);
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
   color: $color-default-white;
 
-  background-color: green;
+  background-color: $color-site-primary;
   border: none;
-  border-radius: 30px;
+  border-radius: 16px;
 
   cursor: pointer;
 
   transition: background-color $trans-default;
 
   &:disabled {
-    background-color: grey;
+    background-color: $color-spun-pearl;
 
     pointer-events: none;
   }
 
   @include hover-focus {
-    color: $color-default-white;
-
-    background-color: orange;
+    background-color: $color-site-secondary;
   }
 }

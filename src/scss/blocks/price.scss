@@ -1,0 +1,40 @@
+.price__slider {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @include vp-768 {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.price__descr {
+  max-width: 425px;
+  margin: 0;
+
+  letter-spacing: -0.2px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.price__link {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  max-width: 425px;
+  margin: 0;
+
+  letter-spacing: 0.2px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.price__link-icon {
+  color: $color-site-primary;
+}
