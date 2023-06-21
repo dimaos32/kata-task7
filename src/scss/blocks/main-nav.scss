@@ -1,0 +1,44 @@
+.main-nav__list {
+  @include clear-list;
+}
+
+.main-nav__list-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  @include vp-1024 {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.main-nav__link {
+  @extend %txt-lg;
+
+  font-weight: 500;
+  letter-spacing: -0.2px;
+
+  &.is-current {
+    position: relative;
+    color: $color-site-text-secondary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: calc(-1 * var(--container-padding-x));
+      bottom: -3px;
+
+      width: 4px;
+      border-radius: 0 4px 4px 0;
+
+      background-color: $color-site-secondary;
+    }
+
+    @include hover-focus {
+      color: $color-site-text-secondary;
+    }
+  }
+}

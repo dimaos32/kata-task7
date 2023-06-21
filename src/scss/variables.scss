@@ -19,6 +19,8 @@ $color-turquoise:                   #41f6d7;
 $color-water-leaf:                  #b8ffec;
 $color-clear-day:                   #d9fff5;
 
+$color-sapphire:                    #0e1850;
+
 
 $color-site-primary:                $color-violet-red;
 $color-site-secondary:              $color-turquoise;
@@ -40,7 +42,7 @@ $gradient-section-title:            linear-gradient(
 
 // Shadow
 
-// $shadow-header:                     0 6px 8px rgba($color-default-black, 0.06);
+$shadow-menu:                       16px 0 52px rgba($color-sapphire, 0.20);
 
 // Typography
 // ---------------------------------

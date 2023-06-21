@@ -13,6 +13,7 @@ import {initSliderTabs} from './modules/sliders/slider-tabs';
 import {initSliderBase} from './modules/sliders/slider-base';
 import {initSliderPrice} from './modules/sliders/slider-price';
 
+import {initMenu} from './modules/init-menu';
 import {initTabs} from './modules/init-tabs';
 import {initShowHideText} from './modules/init-show-hide-text';
 import {initShowHideSlides} from './modules/init-show-hide-slides';
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderBase();
   initSliderPrice();
 
+  initMenu();
   initTabs();
   initShowHideText();
   initShowHideSlides();

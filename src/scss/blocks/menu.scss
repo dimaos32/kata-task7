@@ -1,0 +1,177 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    visibility $trans-modal,
+    opacity $trans-modal;
+
+  &.is-opened {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include vp-1024 {
+    right: unset;
+
+    width: 300px;
+
+    display: block;
+
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba($color-default-white, 0.9);
+
+  @include vp-1024 {
+    display: none;
+  }
+}
+
+.menu__wrapper {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
+  padding: 20px 0 32px;
+
+  overflow-y: auto;
+
+  background-color: $color-default-white;
+  box-shadow: $shadow-menu;
+
+  @include vp-1024 {
+    width: 100%;
+    padding: 30px 0 50px;
+  }
+}
+
+.menu__header {
+  margin-bottom: 50px;
+
+  @include vp-1024 {
+    margin-bottom: 36px;
+  }
+}
+
+.menu__container {
+  display: flex;
+  align-items: center;
+}
+
+.menu__close-menu-btn {
+  margin-right: 16px;
+
+  @include vp-1024 {
+    display: none;
+  }
+}
+
+.menu__logo {
+  margin-right: 16px;
+}
+
+.menu__search-btn {
+  margin-left: auto;
+}
+
+.menu__nav {
+  margin-bottom: 24px;
+
+  @include vp-1024 {
+    margin-bottom: 36px;
+  }
+}
+
+.menu__footer {
+  margin-top: auto;
+}
+
+.menu__user-menu {
+  margin-bottom: 16px;
+}
+
+.menu__user-menu-list {
+  @include clear-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px;
+}
+
+.menu__user-menu-item {
+  padding: 8px;
+}
+
+.menu__email-link {
+  @extend %txt-lg;
+
+  display: block;
+  width: fit-content;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.menu__phone-link {
+  @extend .h2;
+
+  display: block;
+  width: fit-content;
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.menu__lang-menu-list {
+  @include clear-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+}
+
+.menu__lang-menu-item {
+  padding: 4px;
+}
+
+.menu__lang-menu-link {
+  @extend %txt-lg;
+
+  font-weight: 500;
+  letter-spacing: -0.2px;
+
+  &.is-current {
+    color: $color-site-text-secondary;
+
+    @include hover-focus {
+      color: $color-site-text-secondary;
+    }
+  }
+}
