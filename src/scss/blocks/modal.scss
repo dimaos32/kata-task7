@@ -89,13 +89,18 @@
   .modal--fit-content & {
     width: 100%;
 
-    @include vp-768 {
+    @include vp-576 {
       width: auto;
     }
   }
 
   @include vp-576 {
     width: 440px;
+    padding-top: 40px;
+
+    .modal--fit-content & {
+      width: auto;
+    }
   }
 }
 
