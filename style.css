@@ -1563,52 +1563,6 @@ button,
   scrollbar-width: none; }
   .modal::-webkit-scrollbar {
     display: none; }
-  .modal__wrapper {
-    position: relative;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 16px; }
-    @media (min-width: 768px) {
-      .modal__wrapper {
-        padding: 60px 40px; } }
-  .modal__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer; }
-  .modal__content {
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    background-color: #ffffff; }
-    @media (min-width: 768px) {
-      .modal__content {
-        width: 600px;
-        padding: 40px; } }
-  .modal__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    background: rgba(255, 255, 255, 0);
-    border: none;
-    cursor: pointer; }
-  .modal--responsive .modal__content {
-    width: 100%; }
-  .modal--fit-content .modal__content {
-    width: 100%; }
-    @media (min-width: 768px) {
-      .modal--fit-content .modal__content {
-        width: auto; } }
   .modal--no-scale {
     transform: none; }
   .modal--preload {
@@ -1618,6 +1572,123 @@ button,
     visibility: visible;
     opacity: 1;
     pointer-events: auto; }
+  @media (min-width: 576px) {
+    .modal {
+      transform-origin: right center; } }
+
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0; }
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer; }
+
+.modal__content {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 105px var(--container-padding-x) 80px;
+  background-color: #ffffff; }
+  .modal--responsive .modal__content {
+    width: 100%; }
+  .modal--fit-content .modal__content {
+    width: 100%; }
+    @media (min-width: 768px) {
+      .modal--fit-content .modal__content {
+        width: auto; } }
+  @media (min-width: 576px) {
+    .modal__content {
+      width: 440px; } }
+
+.modal__close-btn {
+  position: absolute;
+  top: 24px;
+  left: var(--container-padding-x);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer; }
+  @media (min-width: 576px) {
+    .modal__close-btn {
+      left: -72px; } }
+
+.modal__title {
+  position: relative;
+  margin: 0; }
+  .modal__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--container-padding-x));
+    bottom: 0;
+    width: 4px;
+    border-radius: 0 4px 4px 0;
+    background-color: #41f6d7; }
+  .modal__title:not(:last-child) {
+    margin-bottom: 24px; }
+
+.modal__form {
+  max-width: calc(440px - var(--container-padding-x)); }
+
+.modal__form-input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease; }
+  .modal__form-input:not(:last-child) {
+    margin-bottom: 16px; }
+  .modal__form-input:hover, .modal__form-input:focus {
+    border-color: #ff3e79; }
+
+.modal__form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 11px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease; }
+  .modal__form-textarea:not(:last-child) {
+    margin-bottom: 16px; }
+  .modal__form-textarea:hover, .modal__form-textarea:focus {
+    border-color: #ff3e79; }
+
+.modal__form-agreement {
+  margin: 0; }
+  .modal__form-agreement:not(:last-child) {
+    margin-bottom: 16px; }
+
+.modal__form-agreement-link {
+  color: #ff3e79; }
+  @media (hover: hover) {
+    .modal__form-agreement-link:hover:not(.focus-visible) {
+      color: #41f6d7; } }
+  .modal__form-agreement-link.focus-visible:focus {
+    color: #41f6d7; }
+
+.modal__form-submit-btn {
+  display: flex;
+  margin-left: auto; }
+  .modal__form-submit-btn:not(:first-child) {
+    margin-top: 24px; }
+  .modal__form-submit-btn:not(:last-child) {
+    margin-bottom: 24px; }
 
 .menu {
   position: fixed;
