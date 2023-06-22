@@ -1604,12 +1604,15 @@ button,
     width: 100%; }
   .modal--fit-content .modal__content {
     width: 100%; }
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       .modal--fit-content .modal__content {
         width: auto; } }
   @media (min-width: 576px) {
     .modal__content {
-      width: 440px; } }
+      width: 440px;
+      padding-top: 40px; }
+      .modal--fit-content .modal__content {
+        width: auto; } }
 
 .modal__close-btn {
   position: absolute;
